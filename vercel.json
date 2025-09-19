@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "monorepo": true,
+  "projects": [
+    {
+      "name": "cybermind-frontend",
+      "directory": "frontend",
+      "settings": {
+        "buildCommand": "cd .. && pnpm build:frontend",
+        "installCommand": "cd .. && pnpm install"
+      }
+    },
+    {
+      "name": "cybermind-backend",
+      "directory": "backend",
+      "settings": {
+        "buildCommand": "cd .. && pnpm build:backend",
+        "installCommand": "cd .. && pnpm install"
+      }
+    }
+  ]
+}
