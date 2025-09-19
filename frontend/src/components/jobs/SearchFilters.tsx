@@ -197,9 +197,6 @@ export function SearchFilters({ filters, onFiltersChange }: SearchFiltersProps) 
                   backgroundColor: '#e9ecef',
                   height: 6,
                 },
-                range: {
-                  backgroundColor: '#1890ff',
-                },
                 thumb: {
                   borderColor: '#1890ff',
                   backgroundColor: 'white',

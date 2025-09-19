@@ -78,6 +78,24 @@ pnpm --filter frontend type-check # TypeScript check
 3. Backend serves API docs at http://localhost:3001/api/docs
 4. Frontend development server includes hot reload and dev tools
 
+### Production Deployment (Vercel + Neon)
+- **Unified App**: https://cybermind-10tx7iphw-rohiits-projects.vercel.app
+- **Frontend**: Same URL (main pages)
+- **Backend API**: Same URL + `/api/*` (e.g., `/api/jobs`)
+- **Database**: Neon PostgreSQL (postgresql://neondb_owner:***@ep-lingering-breeze-a1o4fvxe-pooler.ap-southeast-1.aws.neon.tech/neondb)
+- **Status**: Unified deployment, CORS-free, Vercel free plan compatible
+
+### Database Management
+```bash
+# Run migrations on Neon database
+npx ts-node src/migrate.ts
+
+# Seed database with sample data
+pnpm seed
+
+# Connect to production database (using DATABASE_URL from .env)
+```
+
 ### Key Features Implemented
 - Job CRUD operations with form validation
 - Advanced filtering (search, job type, salary range)
