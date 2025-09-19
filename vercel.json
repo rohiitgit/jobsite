@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "buildCommand": "pnpm --filter shared build && pnpm --filter backend build && pnpm --filter frontend build",
-  "installCommand": "pnpm install",
   "builds": [
     {
       "src": "frontend/package.json",
-      "use": "@vercel/next"
+      "use": "@vercel/next",
+      "config": {
+        "buildCommand": "cd .. && pnpm --filter shared build && cd frontend && pnpm build"
+      }
     },
     {
       "src": "backend/api/index.ts",
