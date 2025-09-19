@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "cd .. && pnpm --filter shared build",
+    "prebuild": "cd .. && pnpm --filter shared build && cd frontend && rm -rf node_modules/@cybermind/shared && mkdir -p node_modules/@cybermind && cp -r ../shared node_modules/@cybermind/shared",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
