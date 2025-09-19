@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "concurrently \"pnpm --filter backend dev\" \"pnpm --filter frontend dev\"",
     "build": "pnpm --filter shared build && pnpm --filter backend build && pnpm --filter frontend build",
+    "build:shared": "pnpm --filter shared build",
     "build:frontend": "pnpm --filter shared build && pnpm --filter frontend build",
     "build:backend": "pnpm --filter shared build && pnpm --filter backend build",
     "test": "pnpm --filter backend test && pnpm --filter frontend test",

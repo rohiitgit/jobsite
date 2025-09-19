@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && pnpm build",
+  "buildCommand": "pnpm build:frontend",
   "installCommand": "pnpm install",
   "builds": [
     {
