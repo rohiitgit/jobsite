@@ -4,7 +4,7 @@
   "description": "NestJS backend for job management system",
   "main": "dist/main.js",
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "cd .. && pnpm --filter shared build && cd backend && rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
