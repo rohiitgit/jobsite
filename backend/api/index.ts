@@ -46,6 +46,13 @@ async function createApp() {
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
+    console.log('API handler called:', req.method, req.url);
+
+    // Simple test response for root API path
+    if (req.url === '/api' || req.url === '/') {
+      return res.json({ message: 'Cybermind API is working', timestamp: new Date().toISOString() });
+    }
+
     const app = await createApp();
     const server = app.getHttpAdapter().getInstance();
     return server(req, res);
