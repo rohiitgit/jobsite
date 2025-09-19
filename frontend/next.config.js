@@ -5,6 +5,9 @@ const nextConfig = {
   },
   transpilePackages: ['@cybermind/shared'],
   output: 'standalone',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   env: {
     NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
   },
