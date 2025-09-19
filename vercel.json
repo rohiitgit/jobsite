@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm --filter shared build && pnpm --filter frontend build",
+  "buildCommand": "pnpm --filter shared build && pnpm --filter backend build && pnpm --filter frontend build",
   "installCommand": "pnpm install",
   "builds": [
     {
